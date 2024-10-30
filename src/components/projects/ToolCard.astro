@@ -1,0 +1,23 @@
+---
+import TailwindLogo from "../icons/TailwindLogo.astro";
+import NextLogo from "../icons/NextLogo.astro";
+
+const { technology } = Astro.props;
+---
+
+{
+  technology === "Tailwind" && (
+    <span class="flex items-center justify-center gap-2 py-1 px-3 w-fit bg-tailwind-color bg-opacity-20 backdrop-blur-sm rounded-full text-xs font-semibold">
+      <TailwindLogo />
+      TailwindCSS
+    </span>
+  )
+}
+{
+  technology === "Next" && (
+    <span class="flex items-center justify-center gap-2 py-1 px-3 w-fit bg-next-color backdrop-blur-sm rounded-full text-xs font-semibold">
+      <NextLogo />
+      Next.js
+    </span>
+  )
+}

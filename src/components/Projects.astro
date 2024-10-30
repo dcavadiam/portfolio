@@ -1,16 +1,60 @@
+---
+import ProjectCard from "./projects/ProjectCard.astro";
+
+const projects = [
+  {
+    title: "Dragon Radar",
+    description: "This page contains all the characters of the Dragon Ball sagas. It is still in process.",
+    image: "/dragon-radar-image.webp",
+    technologies: ["Next", "Tailwind"],
+    links: [
+      {
+        name: "Code",
+        url: "https://github.com/dcavadiam/Dragon-Radar",
+      },
+      {
+        name: "Deploy",
+        url: "https://cm-dragon-radar.vercel.app/",
+      },
+    ],
+  }
+];
+---
+
 <section
-  class="flex flex-col gap-4 w-full max-w-4xl m-auto max-md:flex-col max-md:mt-[5rem] max-md:mx-[0.5rem] max-md:items-start" id="projects"
+  class="flex flex-col gap-6 w-full max-w-4xl m-auto max-md:flex-col max-md:mx-[0.5rem] max-md:items-start"
+  id="projects"
 >
   <div class="flex items-center gap-2">
-    <svg xmlns="http://www.w3.org/2000/svg"  width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M7 8l-4 4l4 4" />
-  <path d="M17 8l4 4l-4 4" />
-  <path d="M14 4l-4 16" />
-</svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="40"
+      height="40"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M7 8l-4 4l4 4"></path>
+      <path d="M17 8l4 4l-4 4"></path>
+      <path d="M14 4l-4 16"></path>
+    </svg>
     <h2 class="text-4xl font-semibold">Projects</h2>
   </div>
-  <span>Coming soon ...</span>
-  
+  <div>
+    {
+      projects.map(({ title, description, image, technologies, links }) => (
+        <ProjectCard
+          title={title}
+          description={description}
+          image={image}
+          technologies={technologies}
+          links={links}
+        />
+      ))
+    }
+  </div>
 </section>
-

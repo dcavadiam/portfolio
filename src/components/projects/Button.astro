@@ -1,0 +1,15 @@
+---
+import GithubLogo from "../icons/GithubLogo.astro";
+import LinkIcon from "../icons/LinkIcon.astro";
+
+const { href, text } = Astro.props;
+---
+
+<a href={href} class="duration-150 hover:scale-105">
+{
+    text === "Code" && <GithubLogo />
+}
+{
+    text === "Deploy" && <LinkIcon />
+}
+</a>
