@@ -17,6 +17,22 @@ const projects = [
         url: "https://cm-dragon-radar.vercel.app/",
       },
     ],
+  },
+  {
+    title: "4 in line",
+    description: "This is a simple game where you have to guess the number of the next 4 numbers in a row.",
+    image: "/4-en-linea.webp",
+    technologies: ["Vite", "Javascript"],
+    links: [
+      {
+        name: "Code",
+        url: "https://github.com/dcavadiam/react/tree/main/self-learning/cuatro-en-linea",
+      },
+      {
+        name: "Deploy",
+        url: "https://cm-fourinline.netlify.app",
+      },
+    ],
   }
 ];
 ---
@@ -44,7 +60,7 @@ const projects = [
     </svg>
     <h2 class="text-4xl font-semibold">Projects</h2>
   </div>
-  <div>
+  <div class="flex flex-col gap-8 w-full max-w-4xl m-auto max-md:flex-col max-md:mx-[0.5rem] max-md:items-start">
     {
       projects.map(({ title, description, image, technologies, links }) => (
         <ProjectCard

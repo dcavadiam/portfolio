@@ -23,7 +23,13 @@ export default {
 				},
 				'next':{
 					'color': '#000000',
-				}
+				},
+				'vite':{
+					'color': '#5468ff',
+				},
+				'javascript':{
+					'color': '#f1e05a',
+				},
 
 			},
 		},
