@@ -19,7 +19,7 @@ export default {
 					'950': '#2a0028',
 				},
 				'tailwind':{
-					'color':'#38bdf8',
+					'color':'#38bdf8'
 				},
 				'next':{
 					'color': '#000000',
@@ -29,6 +29,9 @@ export default {
 				},
 				'javascript':{
 					'color': '#f1e05a',
+				},
+				'typescript':{
+					'color': '#3178C6',
 				},
 
 			},

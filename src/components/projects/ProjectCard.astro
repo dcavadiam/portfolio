@@ -19,11 +19,11 @@ const { title, description, image, technologies, links }: Props = Astro.props;
 ---
 
 <div class="flex gap-4 w-full m-auto max-md:flex-col">
-  <img src=`${image}` alt="Project Image" class="w-full max-w-[400px] rounded-md shadow-lg shadow-jacaranda-900 object-cover" />
+  <img src=`${image}` alt="Project Image" class="w-full max-w-[400px] rounded-xl shadow-lg shadow-jacaranda-900" />
   <div  class="flex flex-col gap-3 w-full">
     <h3 class="text-2xl font-semibold">{title}</h3>
 
-    <div class="flex gap-2">
+    <div class="flex gap-2 flex-wrap">
       {technologies.map((technology) => <ToolCard technology={technology} />)}
     </div>
     <p>{description}</p>

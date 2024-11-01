@@ -3,6 +3,7 @@ import TailwindLogo from "../icons/TailwindLogo.astro";
 import NextLogo from "../icons/NextLogo.astro";
 import ViteLogo from "@components/icons/ViteLogo.astro";
 import JavascriptLogo from "@components/icons/JavascriptLogo.astro";
+import TypescriptLogo from "@components/icons/TypescriptLogo.astro";
 
 const { technology } = Astro.props;
 ---
@@ -36,6 +37,14 @@ const { technology } = Astro.props;
     <span class="flex items-center justify-center gap-2 py-1 px-3 w-fit bg-javascript-color bg-opacity-20 backdrop-blur-sm rounded-full text-xs font-semibold">
       <JavascriptLogo />
       Javascript
+    </span>
+  ) 
+}
+{
+  technology === "Typescript" && (
+    <span class="flex items-center justify-center gap-2 py-1 px-3 w-fit bg-typescript-color bg-opacity-20 backdrop-blur-sm rounded-full text-xs font-semibold">
+      <TypescriptLogo />
+      Typescript
     </span>
   ) 
 }
