@@ -33,6 +33,9 @@ export default {
 				'typescript':{
 					'color': '#3178C6',
 				},
+				'shadcn':{
+					'color': '#161717',
+				}
 
 			},
 		},

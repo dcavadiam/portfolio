@@ -4,6 +4,7 @@ import NextLogo from "../icons/NextLogo.astro";
 import ViteLogo from "@components/icons/ViteLogo.astro";
 import JavascriptLogo from "@components/icons/JavascriptLogo.astro";
 import TypescriptLogo from "@components/icons/TypescriptLogo.astro";
+import ShadCNLogo from "@components/icons/ShadCNLogo.astro";
 
 const { technology } = Astro.props;
 ---
@@ -47,4 +48,12 @@ const { technology } = Astro.props;
       Typescript
     </span>
   ) 
+}
+{
+  technology === "ShadCN" && (
+    <span class="flex items-center justify-center gap-2 py-1 px-3 w-fit bg-shadcn-color backdrop-blur-sm rounded-full text-xs font-semibold">
+      <ShadCNLogo />
+      ShadCN
+    </span>
+  )
 }
