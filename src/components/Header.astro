@@ -1,10 +1,14 @@
 <header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2 px-4 py-2">
     <nav class="flex flex-row justify-center gap-4 px-4 py-2 bg-white bg-opacity-20 backdrop-blur-sm rounded-full ">
-        <a class="duration-150 hover:text-jacaranda-500 hover:scale-105" href="#experience">Experience</a>
-        <a class="duration-150 hover:text-jacaranda-500 hover:scale-105" href="#projects">Projects</a>
-        <a class="duration-150 hover:text-jacaranda-500 hover:scale-105" href="#skills">Skills</a>
-        <a class="duration-150 hover:text-jacaranda-500 hover:scale-105" href="#about">About me</a>
-        <a class="duration-150 hover:text-jacaranda-500 hover:scale-105" href="mailto:diegocamodev@gmail.com">Contact</a>
+        <a class="font-semibold duration-150 hover:text-jacaranda-500 hover:scale-105" href="#experience">Experience</a>
+        <a class="font-semibold duration-150 hover:text-jacaranda-500 hover:scale-105" href="#projects">Projects</a>
+        <a class="font-semibold duration-150 hover:text-jacaranda-500 hover:scale-105" href="#skills">Skills</a>
+        <a class="font-semibold duration-150 hover:text-jacaranda-500 hover:scale-105" href="#about">About me</a>
+        <a class="font-semibold duration-150 hover:text-jacaranda-500 hover:scale-105" href="mailto:diegocamodev@gmail.com">Contact</a>
         <!-- <img id="traslate" src="/language.svg" alt="Language icon" class="w-6 duration-150 hover:scale-105" /> -->
     </nav>
 </header>
+<script>
+import { setActiveLink } from "@actions/header";
+    setActiveLink();
+</script>
