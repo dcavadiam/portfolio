@@ -10,7 +10,7 @@ export const skills: Skill[] = [
     icon: "bootstrap",
   },
   {
-    name: "Css",
+    name: "CSS3",
     icon: "css",
   },
   {
@@ -26,35 +26,35 @@ export const skills: Skill[] = [
     icon: "git",
   },
   {
-    name: "Github",
+    name: "GitHub",
     icon: "github",
   },
   {
-    name: "Html",
+    name: "HTML5",
     icon: "html",
   },
   {
-    name: "Javascript",
+    name: "JavaScript",
     icon: "javascript",
   },
   {
-    name: "Next",
+    name: "Next.js",
     icon: "next",
   },
   {
-    name: "Php",
+    name: "PHP",
     icon: "php",
   },
   {
-    name: "React",
+    name: "React.js",
     icon: "react",
   },
   {
-    name: "Tailwind",
+    name: "TailwindCSS",
     icon: "tailwind",
   },
   {
-    name: "Typescript",
+    name: "TypeScript",
     icon: "typescript",
   },
   {
