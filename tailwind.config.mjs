@@ -35,6 +35,7 @@ export default {
 					typescript: '#3178C6',
 					vercel: '#000000',
 					vite: '#646CFF',
+					shadcn: '#000000',
 				},
 			},
 		},
