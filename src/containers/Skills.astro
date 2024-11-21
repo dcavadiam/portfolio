@@ -1,0 +1,36 @@
+---
+import SkillCard from "@components/skills/SkillCard.astro";
+import { skills } from "@data/skills";
+---
+
+<section
+  class="flex flex-col gap-6 w-full max-w-4xl m-auto max-md:flex-col max-md:mx-[0.5rem] max-md:items-start"
+  id="skills"
+>
+  <span class="flex items-center gap-2">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="40"
+      height="40"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M7 8l-4 4l4 4"></path>
+      <path d="M17 8l4 4l-4 4"></path>
+      <path d="M14 4l-4 16"></path>
+    </svg>
+    <h2 class="text-4xl font-semibold">Skills</h2>
+  </span>
+  <div class="flex flex-row gap-x-3 gap-y-8 flex-wrap content-stretch">
+  {
+    skills.map(({ name, icon }) => (
+      <SkillCard name={name} icon={icon} />
+    ))
+  }
+  </div>
+</section>

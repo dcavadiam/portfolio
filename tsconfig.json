@@ -5,7 +5,14 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@pages/*": ["src/pages/*"]
-    }
+      "@pages/*": ["src/pages/*"],
+      "@custom-types/*": ["src/custom-types/*"],
+      "@data/*": ["src/data/*"]
+    },
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ]
   }
 }

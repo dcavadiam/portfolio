@@ -1,0 +1,153 @@
+---
+import AstroIcon from 'src/components/svgs/Astro.astro';
+import Bootstrap from 'src/components/svgs/Bootstrap.astro';
+import Css from 'src/components/svgs/Css.astro';
+import Figma from 'src/components/svgs/Figma.astro';
+import Flutter from 'src/components/svgs/Flutter.astro';
+import Git from 'src/components/svgs/Git.astro';
+import Github from 'src/components/svgs/Github.astro';
+import Html from 'src/components/svgs/Html.astro';  
+import Javascript from 'src/components/svgs/Js.astro';
+import Next from 'src/components/svgs/Next.astro';
+import Php from 'src/components/svgs/Php.astro';
+import React from 'src/components/svgs/React.astro';
+import Tailwind from 'src/components/svgs/Tailwind.astro';
+import Typescript from 'src/components/svgs/Ts.astro';
+import Vercel from 'src/components/svgs/Vercel.astro';
+import Vite from 'src/components/svgs/Vite.astro';
+
+interface Props {
+    name: string;
+    icon: string;
+}
+
+const { name, icon } = Astro.props
+---
+{
+    icon === 'astro' && (
+        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-astro duration-300">
+            <AstroIcon />
+            <h3 class="text-sm font-semibold">{name}</h3>
+        </span>
+    )
+}
+{
+    icon === 'bootstrap' && (
+        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-bootstrap border-tool-bootstrap duration-300">
+            <Bootstrap />
+            <h3 class="text-sm font-semibold">{name}</h3>
+        </span>
+    )
+}
+{
+    icon === 'css' && (
+        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-css border-tool-css duration-300">
+            <Css />
+            <h3 class="text-sm font-semibold">{name}</h3>
+        </span>
+    )
+}
+{
+    icon === 'figma' && (
+        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-figma border-tool-figma duration-300">
+            <Figma />
+<h3 class="text-sm font-semibold">{name}</h3>
+        </span>
+    )
+}
+{
+    icon === 'flutter' && (
+        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-flutter border-tool-flutter duration-300">
+            <Flutter />
+            <h3 class="text-sm font-semibold">{name}</h3>
+        </span>
+    )
+}
+{
+    icon === 'git' && (
+        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-git border-tool-git duration-300">
+            <Git />
+            <h3 class="text-sm font-semibold">{name}</h3>
+        </span>
+    )
+}
+{
+    icon === 'github' && (
+        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-github border-tool-github duration-300">
+            <Github />
+            <h3 class="text-sm font-semibold">{name}</h3>
+        </span>
+    )
+}
+{
+    icon === 'html' && (            
+        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-html border-tool-html duration-300">
+            <Html />
+            <h3 class="text-sm font-semibold">{name}</h3>
+        </span>
+    )
+}
+{
+    icon === 'javascript' && (
+        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-javascript border-tool-javascript duration-300">
+            <Javascript />
+            <h3 class="text-sm font-semibold">{name}</h3>
+        </span>
+    )
+}
+{
+    icon === 'next' && (
+        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-next border-tool-next duration-300">
+            <Next />
+            <h3 class="text-sm font-semibold">{name}</h3>
+        </span>
+    )
+}
+{
+    icon === 'php' && (
+        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-php border-tool-php duration-300">
+            <Php />
+            <h3 class="text-sm font-semibold">{name}</h3>
+        </span>
+    )
+}
+{
+    icon === 'react' && (
+        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-react border-tool-react duration-300">
+            <React />
+            <h3 class="text-sm font-semibold">{name}</h3>
+        </span>
+    )
+}
+{
+    icon === 'tailwind' && (
+        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-tailwind border-tool-tailwind duration-300">
+            <Tailwind />
+            <h3 class="text-sm font-semibold">{name}</h3>
+        </span>
+    )
+}
+{
+    icon === 'typescript' && (
+        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-typescript border-tool-typescript duration-300">
+            <Typescript />
+            <h3 class="text-sm font-semibold">{name}</h3>
+        </span>
+    )
+}
+{
+    icon === 'vercel' && (
+        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-vercel border-tool-vercel duration-300">
+            <Vercel />
+            <h3 class="text-sm font-semibold">{name}</h3>
+        </span>
+    )
+}
+{
+    icon === 'vite' && (
+        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-vite border-tool-vite duration-300">
+            <Vite />
+            <h3 class="text-sm font-semibold">{name}</h3>
+        </span>
+    )
+}
