@@ -25,7 +25,7 @@ const { name, icon } = Astro.props
 ---
 {
     icon === 'astro' && (
-        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-astro duration-300">
+        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-astro duration-300">
             <AstroIcon />
             <h3 class="text-sm font-semibold">{name}</h3>
         </span>
@@ -33,7 +33,7 @@ const { name, icon } = Astro.props
 }
 {
     icon === 'bootstrap' && (
-        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-bootstrap border-tool-bootstrap duration-300">
+        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-bootstrap border-tool-bootstrap duration-300">
             <Bootstrap />
             <h3 class="text-sm font-semibold">{name}</h3>
         </span>
@@ -41,7 +41,7 @@ const { name, icon } = Astro.props
 }
 {
     icon === 'css' && (
-        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-css border-tool-css duration-300">
+        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-css border-tool-css duration-300">
             <Css />
             <h3 class="text-sm font-semibold">{name}</h3>
         </span>
@@ -49,7 +49,7 @@ const { name, icon } = Astro.props
 }
 {
     icon === 'figma' && (
-        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-figma border-tool-figma duration-300">
+        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-figma border-tool-figma duration-300">
             <Figma />
 <h3 class="text-sm font-semibold">{name}</h3>
         </span>
@@ -57,7 +57,7 @@ const { name, icon } = Astro.props
 }
 {
     icon === 'flutter' && (
-        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-flutter border-tool-flutter duration-300">
+        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-flutter border-tool-flutter duration-300">
             <Flutter />
             <h3 class="text-sm font-semibold">{name}</h3>
         </span>
@@ -65,7 +65,7 @@ const { name, icon } = Astro.props
 }
 {
     icon === 'git' && (
-        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-git border-tool-git duration-300">
+        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-git border-tool-git duration-300">
             <Git />
             <h3 class="text-sm font-semibold">{name}</h3>
         </span>
@@ -73,7 +73,7 @@ const { name, icon } = Astro.props
 }
 {
     icon === 'github' && (
-        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-github border-tool-github duration-300">
+        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-github border-tool-github duration-300">
             <Github />
             <h3 class="text-sm font-semibold">{name}</h3>
         </span>
@@ -81,7 +81,7 @@ const { name, icon } = Astro.props
 }
 {
     icon === 'html' && (            
-        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-html border-tool-html duration-300">
+        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-html border-tool-html duration-300">
             <Html />
             <h3 class="text-sm font-semibold">{name}</h3>
         </span>
@@ -89,7 +89,7 @@ const { name, icon } = Astro.props
 }
 {
     icon === 'javascript' && (
-        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-javascript border-tool-javascript duration-300">
+        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-javascript border-tool-javascript duration-300">
             <Javascript />
             <h3 class="text-sm font-semibold">{name}</h3>
         </span>
@@ -97,7 +97,7 @@ const { name, icon } = Astro.props
 }
 {
     icon === 'next' && (
-        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-next border-tool-next duration-300">
+        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-next border-tool-next duration-300">
             <Next />
             <h3 class="text-sm font-semibold">{name}</h3>
         </span>
@@ -105,7 +105,7 @@ const { name, icon } = Astro.props
 }
 {
     icon === 'php' && (
-        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-php border-tool-php duration-300">
+        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-php border-tool-php duration-300">
             <Php />
             <h3 class="text-sm font-semibold">{name}</h3>
         </span>
@@ -113,7 +113,7 @@ const { name, icon } = Astro.props
 }
 {
     icon === 'react' && (
-        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-react border-tool-react duration-300">
+        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-react border-tool-react duration-300">
             <React />
             <h3 class="text-sm font-semibold">{name}</h3>
         </span>
@@ -121,7 +121,7 @@ const { name, icon } = Astro.props
 }
 {
     icon === 'tailwind' && (
-        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-tailwind border-tool-tailwind duration-300">
+        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-tailwind border-tool-tailwind duration-300">
             <Tailwind />
             <h3 class="text-sm font-semibold">{name}</h3>
         </span>
@@ -129,7 +129,7 @@ const { name, icon } = Astro.props
 }
 {
     icon === 'typescript' && (
-        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-typescript border-tool-typescript duration-300">
+        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-typescript border-tool-typescript duration-300">
             <Typescript />
             <h3 class="text-sm font-semibold">{name}</h3>
         </span>
@@ -137,7 +137,7 @@ const { name, icon } = Astro.props
 }
 {
     icon === 'vercel' && (
-        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-vercel border-tool-vercel duration-300">
+        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-vercel border-tool-vercel duration-300">
             <Vercel />
             <h3 class="text-sm font-semibold">{name}</h3>
         </span>
@@ -145,7 +145,7 @@ const { name, icon } = Astro.props
 }
 {
     icon === 'vite' && (
-        <span class="flex flex-col items-center w-[86px] gap-1 hover:scale-110 hover:text-tool-vite border-tool-vite duration-300">
+        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-vite border-tool-vite duration-300">
             <Vite />
             <h3 class="text-sm font-semibold">{name}</h3>
         </span>
