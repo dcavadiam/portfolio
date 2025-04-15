@@ -3,11 +3,11 @@
   id="intro"
 >
   <img
-    class="rounded-full"
+    class="intro-image"
     src="/dcavadia.webp"
     alt="Imagen de dcavadia"
-    width="200"
-    height="200"
+    width="350"
+    height="auto"
   />
   <div class="flex flex-col items-start justify-center gap-2">
     <span
@@ -58,3 +58,17 @@
     </div>
   </div>
 </section>
+
+<style> 
+  .intro-image {
+    width: 350px;
+    height: auto;
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 10%,
+      black 80%,
+      transparent 100%
+    );
+  } 
+</style>
