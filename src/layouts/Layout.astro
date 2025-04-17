@@ -13,11 +13,16 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Here we have a portfolio of dcavadia's projects and some other things" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="description" content="Here we have a portfolio of dcavadia's projects and some other things">
+		<meta name="generator" content={Astro.generator} />
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:creator" content="@dcavadiam">
+		<meta name="twitter:title" content="Dcavadia's Portfolio">
+		<meta name="twitter:description" content="Here we have a portfolio of dcavadia's projects and some other things">
+		<meta name="twitter:image" content="/portfolio-preview.webp">
 	</head>
 	<body>
 		<Header />
