@@ -26,6 +26,7 @@ import { projects } from "@data/projects";
     </svg>
     <h2 class="text-4xl font-semibold">Projects</h2>
   </div>
+ 
   <div class="flex flex-col gap-8 w-full max-w-4xl m-auto max-md:flex-col max-md:mx-[0.5rem] max-md:items-start">
     {
       projects.map(({ title, description, image, technologies, links }) => (
@@ -38,5 +39,18 @@ import { projects } from "@data/projects";
         />
       ))
     }
+    
+    <ProjectCard
+      title=""
+      description=""
+      image=""
+      technologies={[]}
+      links={[]}
+      isComingSoon={true}
+    />
+    <p class="text-gray-400/90 text-sm font-thin">
+    * Most of these projects are technical assessments and personal projects that I've developed through self-directed learning and autonomous practice. Each one represents a step in my journey of continuous growth and skill development in software development.
+  </p>
   </div>
+   
 </section>

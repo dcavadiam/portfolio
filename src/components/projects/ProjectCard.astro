@@ -8,6 +8,7 @@ interface Props {
   image: string;
   technologies: string[];
   links: Link[];
+  isComingSoon?: boolean;
 }
 
 interface Link {
@@ -15,26 +16,33 @@ interface Link {
   url: string;
 }
 
-const { title, description, image, technologies, links }: Props = Astro.props;
+const { title, description, image, technologies, links, isComingSoon = false }: Props = Astro.props;
 ---
 
 <div class="flex gap-4 w-full m-auto max-md:flex-col">
-  <div class="relative w-full max-w-[400px] h-auto overflow-hidden rounded-xl">
-    <img src=`${image}` alt="Project Image" class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110" />
-  </div>
-  <div  class="flex flex-col gap-3 w-full">
-    <h3 class="text-2xl font-semibold">{title}</h3>
-
-    <div class="flex gap-2 flex-wrap">
-      {technologies.map((technology) => <ToolCard technology={technology} />)}
+  {!isComingSoon ? (
+    <>
+      <div class="relative w-full max-w-[400px] h-auto overflow-hidden rounded-xl">
+        <img src=`${image}` alt="Project Image" class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110" />
+      </div>
+      <div class="flex flex-col gap-3 w-full">
+        <h3 class="text-2xl font-semibold">{title}</h3>
+        <div class="flex gap-2 flex-wrap">
+          {technologies.map((technology) => <ToolCard technology={technology} />)}
+        </div>
+        <p>{description}</p>
+        <div class="flex gap-4">
+          {
+            links.map(({name, url}) => (
+              <Button href={url} text={name} />
+            ))
+          }
+        </div>
+      </div>
+    </>
+  ) : (
+    <div class="flex flex-col items-center justify-center w-full h-[150px] border-2 border-dashed border-gray-700/30 rounded-xl bg-gray-800/40 backdrop-blur-sm">
+      <h3 class="text-xl font-semibold text-gray-300/50 mb-2">Coming soon more projects...</h3>
     </div>
-    <p>{description}</p>
-    <div class="flex gap-4">
-      {
-        links.map(({name, url}) => (
-          <Button href={url} text={name} />
-        ))
-      }
-    </div>
-  </div>
+  )}
 </div>
