@@ -21,133 +21,33 @@ interface Props {
     icon: string;
 }
 
-const { name, icon } = Astro.props
+const { name, icon } = Astro.props;
+
+const icons = {
+    astro: AstroIcon,
+    bootstrap: Bootstrap,
+    css: Css,
+    figma: Figma,
+    flutter: Flutter,
+    git: Git,
+    github: Github,
+    html: Html,
+    javascript: Javascript,
+    next: Next,
+    php: Php,
+    react: React,
+    tailwind: Tailwind,
+    typescript: Typescript,
+    vercel: Vercel,
+    vite: Vite
+};
+
+const IconComponent = icons[icon as keyof typeof icons];
 ---
-{
-    icon === 'astro' && (
-        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-astro duration-300">
-            <AstroIcon />
-            <h3 class="text-sm font-semibold">{name}</h3>
-        </span>
-    )
-}
-{
-    icon === 'bootstrap' && (
-        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-bootstrap duration-300">
-            <Bootstrap />
-            <h3 class="text-sm font-semibold">{name}</h3>
-        </span>
-    )
-}
-{
-    icon === 'css' && (
-        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-css duration-300">
-            <Css />
-            <h3 class="text-sm font-semibold">{name}</h3>
-        </span>
-    )
-}
-{
-    icon === 'figma' && (
-        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-figma duration-300">
-            <Figma />
-<h3 class="text-sm font-semibold">{name}</h3>
-        </span>
-    )
-}
-{
-    icon === 'flutter' && (
-        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-flutter duration-300">
-            <Flutter />
-            <h3 class="text-sm font-semibold">{name}</h3>
-        </span>
-    )
-}
-{
-    icon === 'git' && (
-        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-git duration-300">
-            <Git />
-            <h3 class="text-sm font-semibold">{name}</h3>
-        </span>
-    )
-}
-{
-    icon === 'github' && (
-        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-github duration-300">
-            <Github />
-            <h3 class="text-sm font-semibold">{name}</h3>
-        </span>
-    )
-}
-{
-    icon === 'html' && (            
-        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-html duration-300">
-            <Html />
-            <h3 class="text-sm font-semibold">{name}</h3>
-        </span>
-    )
-}
-{
-    icon === 'javascript' && (
-        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-javascript duration-300">
-            <Javascript />
-            <h3 class="text-sm font-semibold">{name}</h3>
-        </span>
-    )
-}
-{
-    icon === 'next' && (
-        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-next duration-300">
-            <Next />
-            <h3 class="text-sm font-semibold">{name}</h3>
-        </span>
-    )
-}
-{
-    icon === 'php' && (
-        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-php duration-300">
-            <Php />
-            <h3 class="text-sm font-semibold">{name}</h3>
-        </span>
-    )
-}
-{
-    icon === 'react' && (
-        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-react duration-300">
-            <React />
-            <h3 class="text-sm font-semibold">{name}</h3>
-        </span>
-    )
-}
-{
-    icon === 'tailwind' && (
-        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-tailwind duration-300">
-            <Tailwind />
-            <h3 class="text-sm font-semibold">{name}</h3>
-        </span>
-    )
-}
-{
-    icon === 'typescript' && (
-        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-typescript duration-300">
-            <Typescript />
-            <h3 class="text-sm font-semibold">{name}</h3>
-        </span>
-    )
-}
-{
-    icon === 'vercel' && (
-        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-vercel duration-300">
-            <Vercel />
-            <h3 class="text-sm font-semibold">{name}</h3>
-        </span>
-    )
-}
-{
-    icon === 'vite' && (
-        <span class="flex flex-col items-center w-1/5 max-w-[100px] gap-1 hover:scale-110 hover:text-tool-vite duration-300">
-            <Vite />
-            <h3 class="text-sm font-semibold">{name}</h3>
-        </span>
-    )
-}
+
+<span class="flex flex-col items-center w-1/5 max-w-[100px] gap-2 p-3 rounded-lg bg-white/5 backdrop-blur-sm hover:scale-110 hover:bg-white/10 transition-all duration-300 group">
+    <div class="w-12 h-12 flex items-center justify-center group-hover:text-tool-{icon} transition-colors duration-300">
+        <IconComponent />
+    </div>
+    <h3 class="text-sm font-medium text-center">{name}</h3>
+</span>
