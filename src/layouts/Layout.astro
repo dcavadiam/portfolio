@@ -4,29 +4,57 @@ import Header from '@components/Header.astro';
 
 interface Props {
 	title: string;
+	description?: string;
 }
 
-const { title } = Astro.props;
+const { 
+	title,
+	description = "Professional portfolio of Diego Cavadia - Web Developer with over 2 years of experience in web development, specialized in modern technologies such as React, TypeScript and other modern technologies."
+} = Astro.props;
+
+// Using the current site URL
+const canonicalURL = Astro.url.href;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>{title}</title>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="description" content="Here we have a portfolio of dcavadia's projects and some other things">
+		<link rel="canonical" href={canonicalURL} />
+		
+		<!-- Primary Meta Tags -->
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="author" content="Diego Cavadia" />
+		<meta name="keywords" content="web developer, react, typescript, node.js, portfolio, Diego Cavadia" />
+		<meta name="robots" content="index, follow" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:creator" content="@dcavadiam">
-		<meta name="twitter:title" content="Dcavadia's Portfolio">
-		<meta name="twitter:description" content="Here we have a portfolio of dcavadia's projects and some other things">
-		<meta name="twitter:image" content="/portfolio-preview.webp">
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="/portfolio-preview.webp" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:creator" content="@dcavadiam" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content="/portfolio-preview.webp" />
+
+		<!-- Additional Meta Tags -->
+		<meta name="theme-color" content="#2a0028" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 	</head>
 	<body>
 		<Header />
-		<main class="flex flex-col items-center justify-center gap-[6rem] my-8 min-h-screen px-10 ">
+		<main class="flex flex-col items-center justify-center gap-[6rem] my-8 min-h-screen px-10" role="main">
 			<slot />
 		</main>
 		<Footer />
