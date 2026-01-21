@@ -6,6 +6,13 @@ export interface Project {
   links: Link[];
 }
 
+export interface WebProject {
+  title: string;
+  image: string;
+  description: string;
+  link: Link[];
+}
+
 export interface Link {
   name: string;
   url: string;

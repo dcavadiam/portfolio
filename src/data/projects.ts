@@ -1,4 +1,4 @@
-import type { Project } from "@custom-types/project";
+import type { Project, WebProject } from "@custom-types/project";
 
 export const projects: Project[] = [
   {
@@ -49,6 +49,31 @@ export const projects: Project[] = [
       {
         name: "Deploy",
         url: "https://blossom-test-dcavadia.vercel.app/",
+      },
+    ],
+  },
+];
+
+export const webProjects: WebProject[] = [  
+  {
+    title: "Maripocean",
+    image: "/maripocean.webp",
+    description: "Maripocean is a website for a company that offers water sports services in the department of Atlántico. It is set up and built in WordPress.",
+    link: [
+      {
+        name: "Deploy",
+        url: "https://maripocean.com/",
+      },
+    ],
+  },
+  {
+    title: "Wedding Invitation",
+    image: "/wedding-invitation.webp",
+    description: "This website was created for a interactive wedding invitation, where the guests can see the wedding details and RSVP. It is set up and built in Next.js.",
+    link: [
+      {
+        name: "Deploy",
+        url: "https://rachel-diego.vercel.app/",
       },
     ],
   },
